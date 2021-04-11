@@ -21,7 +21,7 @@ namespace BethanysPieShopHRM.Api.Controllers
         public IActionResult GetEmployeeById(int id) => Ok(_employeeRepository.GetEmployeeById(id));
 
         [HttpPost]
-        public IActionResult CreateEmployee([FromBody] EmployeeModel employee)
+        public IActionResult CreateEmployee([FromBody] Employee employee)
         {
             if (employee is null)
             {

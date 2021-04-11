@@ -10,36 +10,36 @@ namespace BethanysPieShopHRM.Api.Models
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<EmployeeModel> Employees { get; set; }
-        public DbSet<CountryModel> Countries { get; set; }
-        public DbSet<JobCategoryModel> JobCategories { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<JobCategory> JobCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             // seed categories
-            modelBuilder.Entity<CountryModel>().HasData(new CountryModel { CountryId = 1, Name = "Belgium" });
-            modelBuilder.Entity<CountryModel>().HasData(new CountryModel { CountryId = 2, Name = "Germany" });
-            modelBuilder.Entity<CountryModel>().HasData(new CountryModel { CountryId = 3, Name = "Netherlands" });
-            modelBuilder.Entity<CountryModel>().HasData(new CountryModel { CountryId = 4, Name = "USA" });
-            modelBuilder.Entity<CountryModel>().HasData(new CountryModel { CountryId = 5, Name = "Japan" });
-            modelBuilder.Entity<CountryModel>().HasData(new CountryModel { CountryId = 6, Name = "China" });
-            modelBuilder.Entity<CountryModel>().HasData(new CountryModel { CountryId = 7, Name = "UK" });
-            modelBuilder.Entity<CountryModel>().HasData(new CountryModel { CountryId = 8, Name = "France" });
-            modelBuilder.Entity<CountryModel>().HasData(new CountryModel { CountryId = 9, Name = "Brazil" });
+            modelBuilder.Entity<Country>().HasData(new Country { CountryId = 1, Name = "Belgium" });
+            modelBuilder.Entity<Country>().HasData(new Country { CountryId = 2, Name = "Germany" });
+            modelBuilder.Entity<Country>().HasData(new Country { CountryId = 3, Name = "Netherlands" });
+            modelBuilder.Entity<Country>().HasData(new Country { CountryId = 4, Name = "USA" });
+            modelBuilder.Entity<Country>().HasData(new Country { CountryId = 5, Name = "Japan" });
+            modelBuilder.Entity<Country>().HasData(new Country { CountryId = 6, Name = "China" });
+            modelBuilder.Entity<Country>().HasData(new Country { CountryId = 7, Name = "UK" });
+            modelBuilder.Entity<Country>().HasData(new Country { CountryId = 8, Name = "France" });
+            modelBuilder.Entity<Country>().HasData(new Country { CountryId = 9, Name = "Brazil" });
 
-            modelBuilder.Entity<JobCategoryModel>().HasData(new JobCategoryModel() { JobCategoryId = 1, JobCategoryName = "Pie research" });
-            modelBuilder.Entity<JobCategoryModel>().HasData(new JobCategoryModel() { JobCategoryId = 2, JobCategoryName = "Sales" });
-            modelBuilder.Entity<JobCategoryModel>().HasData(new JobCategoryModel() { JobCategoryId = 3, JobCategoryName = "Management" });
-            modelBuilder.Entity<JobCategoryModel>().HasData(new JobCategoryModel() { JobCategoryId = 4, JobCategoryName = "Store staff" });
-            modelBuilder.Entity<JobCategoryModel>().HasData(new JobCategoryModel() { JobCategoryId = 5, JobCategoryName = "Finance" });
-            modelBuilder.Entity<JobCategoryModel>().HasData(new JobCategoryModel() { JobCategoryId = 6, JobCategoryName = "QA" });
-            modelBuilder.Entity<JobCategoryModel>().HasData(new JobCategoryModel() { JobCategoryId = 7, JobCategoryName = "IT" });
-            modelBuilder.Entity<JobCategoryModel>().HasData(new JobCategoryModel() { JobCategoryId = 8, JobCategoryName = "Cleaning" });
-            modelBuilder.Entity<JobCategoryModel>().HasData(new JobCategoryModel() { JobCategoryId = 9, JobCategoryName = "Bakery" });
+            modelBuilder.Entity<JobCategory>().HasData(new JobCategory() { JobCategoryId = 1, JobCategoryName = "Pie research" });
+            modelBuilder.Entity<JobCategory>().HasData(new JobCategory() { JobCategoryId = 2, JobCategoryName = "Sales" });
+            modelBuilder.Entity<JobCategory>().HasData(new JobCategory() { JobCategoryId = 3, JobCategoryName = "Management" });
+            modelBuilder.Entity<JobCategory>().HasData(new JobCategory() { JobCategoryId = 4, JobCategoryName = "Store staff" });
+            modelBuilder.Entity<JobCategory>().HasData(new JobCategory() { JobCategoryId = 5, JobCategoryName = "Finance" });
+            modelBuilder.Entity<JobCategory>().HasData(new JobCategory() { JobCategoryId = 6, JobCategoryName = "QA" });
+            modelBuilder.Entity<JobCategory>().HasData(new JobCategory() { JobCategoryId = 7, JobCategoryName = "IT" });
+            modelBuilder.Entity<JobCategory>().HasData(new JobCategory() { JobCategoryId = 8, JobCategoryName = "Cleaning" });
+            modelBuilder.Entity<JobCategory>().HasData(new JobCategory() { JobCategoryId = 9, JobCategoryName = "Bakery" });
 
-            modelBuilder.Entity<EmployeeModel>().HasData(new EmployeeModel
+            modelBuilder.Entity<Employee>().HasData(new Employee
             {
                 EmployeeId = 1,
                 CountryId = 1,
@@ -62,7 +62,7 @@ namespace BethanysPieShopHRM.Api.Models
                 Longitude = 4.3517
             });
 
-            modelBuilder.Entity<EmployeeModel>().HasData(new EmployeeModel
+            modelBuilder.Entity<Employee>().HasData(new Employee
             {
                 CountryId = 2,
                 MaritalStatus = MaritalStatus.Married,

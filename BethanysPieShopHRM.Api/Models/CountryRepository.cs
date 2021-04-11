@@ -12,8 +12,8 @@ namespace BethanysPieShopHRM.Api.Models
 
         public CountryRepository(AppDbContext appDbContext) => _appDbContext = appDbContext;
 
-        public IEnumerable<CountryModel> GetAllCountries() => _appDbContext.Countries;
+        public IEnumerable<Country> GetAllCountries() => _appDbContext.Countries;
 
-        public CountryModel GetCountryById(int countryId) => _appDbContext.Countries.FirstOrDefault(_ => _.CountryId == countryId);
+        public Country GetCountryById(int countryId) => _appDbContext.Countries.FirstOrDefault(_ => _.CountryId == countryId);
     }
 }

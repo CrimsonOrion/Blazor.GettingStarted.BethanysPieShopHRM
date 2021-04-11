@@ -11,18 +11,18 @@ namespace BethanysPieShopHRM.Api.Models
 
         public EmployeeRepository(AppDbContext appDbContext) => _appDbContext = appDbContext;
 
-        public IEnumerable<EmployeeModel> GetAllEmployees() => _appDbContext.Employees;
+        public IEnumerable<Employee> GetAllEmployees() => _appDbContext.Employees;
 
-        public EmployeeModel GetEmployeeById(int employeeId) => _appDbContext.Employees.FirstOrDefault(_ => _.EmployeeId == employeeId);
+        public Employee GetEmployeeById(int employeeId) => _appDbContext.Employees.FirstOrDefault(_ => _.EmployeeId == employeeId);
 
-        public EmployeeModel AddEmployee(EmployeeModel employee)
+        public Employee AddEmployee(Employee employee)
         {
             var addedEntity = _appDbContext.Employees.Add(employee);
             _appDbContext.SaveChanges();
             return addedEntity.Entity;
         }
 
-        public EmployeeModel UpdateEmployee(EmployeeModel employee)
+        public Employee UpdateEmployee(Employee employee)
         {
             var foundEmployee = _appDbContext.Employees.FirstOrDefault(_ => _.EmployeeId == employee.EmployeeId);
 

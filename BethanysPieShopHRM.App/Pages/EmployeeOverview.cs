@@ -17,41 +17,41 @@ namespace BethanysPieShopHRM.App.Pages
             return base.OnInitializedAsync();
         }
 
-        public IEnumerable<EmployeeModel> Employees { get; set; }
+        public IEnumerable<Employee> Employees { get; set; }
 
-        private List<CountryModel> Countries { get; set; }
+        private List<Country> Countries { get; set; }
 
-        private List<JobCategoryModel> JobCategories { get; set; }
+        private List<JobCategory> JobCategories { get; set; }
 
-        private void InitializeJobCategories() => JobCategories = new List<JobCategoryModel>()
+        private void InitializeJobCategories() => JobCategories = new List<JobCategory>()
             {
-                new JobCategoryModel{JobCategoryId = 1, JobCategoryName = "Pie research"},
-                new JobCategoryModel{JobCategoryId = 2, JobCategoryName = "Sales"},
-                new JobCategoryModel{JobCategoryId = 3, JobCategoryName = "Management"},
-                new JobCategoryModel{JobCategoryId = 4, JobCategoryName = "Store staff"},
-                new JobCategoryModel{JobCategoryId = 5, JobCategoryName = "Finance"},
-                new JobCategoryModel{JobCategoryId = 6, JobCategoryName = "QA"},
-                new JobCategoryModel{JobCategoryId = 7, JobCategoryName = "IT"},
-                new JobCategoryModel{JobCategoryId = 8, JobCategoryName = "Cleaning"},
-                new JobCategoryModel{JobCategoryId = 9, JobCategoryName = "Bakery"},
-                new JobCategoryModel{JobCategoryId = 9, JobCategoryName = "Bakery"}
+                new JobCategory{JobCategoryId = 1, JobCategoryName = "Pie research"},
+                new JobCategory{JobCategoryId = 2, JobCategoryName = "Sales"},
+                new JobCategory{JobCategoryId = 3, JobCategoryName = "Management"},
+                new JobCategory{JobCategoryId = 4, JobCategoryName = "Store staff"},
+                new JobCategory{JobCategoryId = 5, JobCategoryName = "Finance"},
+                new JobCategory{JobCategoryId = 6, JobCategoryName = "QA"},
+                new JobCategory{JobCategoryId = 7, JobCategoryName = "IT"},
+                new JobCategory{JobCategoryId = 8, JobCategoryName = "Cleaning"},
+                new JobCategory{JobCategoryId = 9, JobCategoryName = "Bakery"},
+                new JobCategory{JobCategoryId = 9, JobCategoryName = "Bakery"}
             };
 
-        private void InitializeCountries() => Countries = new List<CountryModel>
+        private void InitializeCountries() => Countries = new List<Country>
             {
-                new CountryModel {CountryId = 1, Name = "Belgium"},
-                new CountryModel {CountryId = 2, Name = "Netherlands"},
-                new CountryModel {CountryId = 3, Name = "USA"},
-                new CountryModel {CountryId = 4, Name = "Japan"},
-                new CountryModel {CountryId = 5, Name = "China"},
-                new CountryModel {CountryId = 6, Name = "UK"},
-                new CountryModel {CountryId = 7, Name = "France"},
-                new CountryModel {CountryId = 8, Name = "Brazil"}
+                new Country {CountryId = 1, Name = "Belgium"},
+                new Country {CountryId = 2, Name = "Netherlands"},
+                new Country {CountryId = 3, Name = "USA"},
+                new Country {CountryId = 4, Name = "Japan"},
+                new Country {CountryId = 5, Name = "China"},
+                new Country {CountryId = 6, Name = "UK"},
+                new Country {CountryId = 7, Name = "France"},
+                new Country {CountryId = 8, Name = "Brazil"}
             };
 
         private void InitializeEmployees()
         {
-            var e1 = new EmployeeModel
+            var e1 = new Employee
             {
                 CountryId = 1,
                 MaritalStatus = MaritalStatus.Single,
@@ -72,7 +72,7 @@ namespace BethanysPieShopHRM.App.Pages
                 JoinedDate = new DateTime(2015, 3, 1)
             };
 
-            var e2 = new EmployeeModel
+            var e2 = new Employee
             {
                 CountryId = 2,
                 MaritalStatus = MaritalStatus.Married,
@@ -92,7 +92,7 @@ namespace BethanysPieShopHRM.App.Pages
                 ExitDate = null,
                 JoinedDate = new DateTime(2017, 12, 24)
             };
-            Employees = new List<EmployeeModel> { e1, e2 };
+            Employees = new List<Employee> { e1, e2 };
         }
     }
 }

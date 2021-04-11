@@ -6,7 +6,7 @@ namespace BethanysPieShopHRM.Api.Models
 {
     public interface ICountryRepository
     {
-        IEnumerable<CountryModel> GetAllCountries();
-        CountryModel GetCountryById(int countryId);
+        IEnumerable<Country> GetAllCountries();
+        Country GetCountryById(int countryId);
     }
 }

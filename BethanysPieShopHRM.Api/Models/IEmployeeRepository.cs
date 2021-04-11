@@ -6,10 +6,10 @@ namespace BethanysPieShopHRM.Api.Models
 {
     public interface IEmployeeRepository
     {
-        EmployeeModel AddEmployee(EmployeeModel employee);
+        Employee AddEmployee(Employee employee);
         void DeleteEmployee(int employeeId);
-        IEnumerable<EmployeeModel> GetAllEmployees();
-        EmployeeModel GetEmployeeById(int employeeId);
-        EmployeeModel UpdateEmployee(EmployeeModel employee);
+        IEnumerable<Employee> GetAllEmployees();
+        Employee GetEmployeeById(int employeeId);
+        Employee UpdateEmployee(Employee employee);
     }
 }

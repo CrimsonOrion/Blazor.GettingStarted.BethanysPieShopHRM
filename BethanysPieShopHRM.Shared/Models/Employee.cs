@@ -2,7 +2,7 @@
 
 namespace BethanysPieShopHRM.Shared
 {
-    public class EmployeeModel
+    public class Employee
     {
         public int EmployeeId { get; set; }
         public string FirstName { get; set; }
@@ -13,7 +13,7 @@ namespace BethanysPieShopHRM.Shared
         public string Zip { get; set; }
         public string City { get; set; }
         public int CountryId { get; set; }
-        public CountryModel Country { get; set; }
+        public Country Country { get; set; }
         public string PhoneNumber { get; set; }
         public bool Smoker { get; set; }
         public MaritalStatus MaritalStatus { get; set; }
@@ -22,7 +22,7 @@ namespace BethanysPieShopHRM.Shared
         public DateTime? JoinedDate { get; set; }
         public DateTime? ExitDate { get; set; }
         public int JobCategoryId { get; set; }
-        public JobCategoryModel JobCategory { get; set; }
+        public JobCategory JobCategory { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
     }

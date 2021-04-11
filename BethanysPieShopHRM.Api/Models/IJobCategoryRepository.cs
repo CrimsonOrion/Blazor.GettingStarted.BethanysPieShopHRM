@@ -6,7 +6,7 @@ namespace BethanysPieShopHRM.Api.Models
 {
     public interface IJobCategoryRepository
     {
-        IEnumerable<JobCategoryModel> GetAllJobCategories();
-        JobCategoryModel GetJobCategoryById(int jobCategoryId);
+        IEnumerable<JobCategory> GetAllJobCategories();
+        JobCategory GetJobCategoryById(int jobCategoryId);
     }
 }

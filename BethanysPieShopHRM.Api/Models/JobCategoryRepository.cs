@@ -11,8 +11,8 @@ namespace BethanysPieShopHRM.Api.Models
 
         public JobCategoryRepository(AppDbContext appDbContext) => _appDbContext = appDbContext;
 
-        public IEnumerable<JobCategoryModel> GetAllJobCategories() => _appDbContext.JobCategories;
+        public IEnumerable<JobCategory> GetAllJobCategories() => _appDbContext.JobCategories;
 
-        public JobCategoryModel GetJobCategoryById(int jobCategoryId) => _appDbContext.JobCategories.FirstOrDefault(_ => _.JobCategoryId == jobCategoryId);
+        public JobCategory GetJobCategoryById(int jobCategoryId) => _appDbContext.JobCategories.FirstOrDefault(_ => _.JobCategoryId == jobCategoryId);
     }
 }

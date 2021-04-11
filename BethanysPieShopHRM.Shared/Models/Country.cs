@@ -1,6 +1,6 @@
 ﻿namespace BethanysPieShopHRM.Shared
 {
-    public class CountryModel
+    public class Country
     {
         public int CountryId { get; set; }
         public string Name { get; set; }
